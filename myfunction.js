@@ -37,7 +37,7 @@ var startAnimation = false;
 var circleId; // Making sure all animations use same circleId and pos
 var pos = 0;
 var reverse = false;
-var posNum = 350;
+var posNum = 150;
 // function which starts an animation on the circles
 function moveMe(){
 	
@@ -75,7 +75,7 @@ function moveMe(){
 		circle3.style.bottom = pos + "px";
 		circle3.style.right = pos + "px";
 		
-		if (pos === 350 || pos === 0){ //checks for position value then reverses the reverse function (from either true or false)
+		if (pos === posNum || pos === 0){ //checks for position value then reverses the reverse function (from either true or false)
 			reverse = !reverse;
 		}
 		
@@ -85,11 +85,18 @@ function moveMe(){
 
 // adds a click event listener to any element after the fact it add/deletes a class of said element.
 flicker.addEventListener('click', () => {
-	if (flicker.classList[0] == 'smallbox')
+	if (flicker.classList[0] == 'smallbox'){
 		flicker.classList.replace('smallbox', 'bigbox');
-	else
+	}else{
 		flicker.classList.replace('bigbox', 'smallbox');
-	
+	}
+
+	if(posNum === 350){
+		posNum = 150;
+	} else{
+		posNum = 350;
+	}
+
 })
 
 
