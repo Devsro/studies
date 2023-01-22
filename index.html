@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body onload="moveMe()">
+    
+    <p id="pdate" class="date"></p>
+    <p id="demo"></p>
+    
+
+    
+    <div id="flicker" class="smallbox"" onmousedown="randomColor(), moveMe()">
+        <div id="flcircle" class="flbox"></div>
+        <div id="flcircle2" class="flbox"></div>
+        <div id="flcircle3" class="flbox"></div>
+        <div id="flcircle4" class="flbox"></div>
+    </div>
+    
+    <div id="buttoncontain">
+    <button id="button" onclick="location.reload();">Reload </button>
+    <!-- <button id="button" onclick="moveMe()"> move me</button> -->
+    <button onclick=hide()>Hide me</button>
+    </div>
+
+    <script src="myfunction.js">
+    </script>
+
+</body>
+</html>
