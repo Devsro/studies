@@ -1,8 +1,8 @@
-// sets a new date then changes the element pdate to the current date.
+ // sets a new date then changes the element pdate to the current date.
 const date = new Date().toDateString(); // converts the date variable to a data string date.
 document.getElementById("pdate").innerHTML = date;
 
-//changes the display from flex to none and vice versa.
+ //changes the display from flex to none and vice versa.
 var flicker = document.getElementById("flicker");
 function hide() {
 	if (flicker.style.display === "none") {
@@ -105,4 +105,4 @@ flicker.addEventListener('click', () => {
 // hello stinky
 
 
-console.log(flicker.className);
+console.log(posNum);
