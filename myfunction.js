@@ -92,6 +92,7 @@ flicker.addEventListener('click', () => {
 
 
 
+// hello stinky
 
 
 console.log(flicker.className);
