@@ -85,7 +85,10 @@ function moveMe(){
 
 // adds a click event listener to any element after the fact it add/deletes a class of said element.
 flicker.addEventListener('click', () => {
-	flicker.classList.toggle('smallbox', 'bigbox')
+	if (flicker.classList[0] == 'smallbox')
+		flicker.classList.replace('smallbox', 'bigbox');
+	else
+		flicker.classList.replace('bigbox', 'smallbox');
 	
 })
 
