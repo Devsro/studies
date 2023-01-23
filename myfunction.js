@@ -48,7 +48,7 @@ function moveMe(){
 	
 	//Check if animation started or not
 	if (!startAnimation){ // if it hasn't started (startAnimation is false)
-		circleId = setInterval(frame, 1); // Start animation
+		circleId = setInterval(frame, 10); // Start animation
 		startAnimation = true; 
 	}else{ // if it started (startAnimation is true)
 		clearInterval(circleId); // Stop animaation
@@ -99,6 +99,10 @@ flicker.addEventListener('click', () => {
 	if (pos >= 149)
 		pos = 149;
 		
-	
-
 })
+
+
+
+var ballspeed = document.getElementById("speedchange");
+
+console.log(ballspeed);
