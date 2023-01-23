@@ -32,7 +32,7 @@ function randomColor(){
 	}
 }
 
-
+var ballspeed = parseInt(document.getElementById('ballspeed').value);
 var startAnimation = false;
 var circleId; // Making sure all animations use same circleId and pos
 var pos = 0;
@@ -100,7 +100,3 @@ flicker.addEventListener('click', () => {
 		pos = 149;
 		
 })
-
-var ballspeed = parseint(document.getElementById('ballspeed').value);
-console.log(ballspeed)
-
