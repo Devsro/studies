@@ -57,6 +57,9 @@ function moveMe(){
 	
 
 	function frame(){
+		if (pos === posNum || pos === 0 || pos + ballspeed > posNum || pos - ballspeed < 0){ //checks for position value then reverses the reverse function (from either true or false)
+			reverse = !reverse;
+		}
 		if(!reverse){ // checks if reverse is false which it is and then adds 1 to position every frame
 			pos += ballspeed;
 		}else{
