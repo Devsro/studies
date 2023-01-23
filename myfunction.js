@@ -36,12 +36,12 @@ var ballspeed = 1;
 var startAnimation = false;
 var circleId; // Making sure all animations use same circleId and pos
 var pos = 0;
-var reverse = false;
+var reverse = true;
 var posNum = 150;
 // function which starts an animation on the circles
 
 function changeSpeed(){
-	ballspeed = parseInt(document.getElementById('ballspeed').value);
+	ballspeed = Math.abs(parseInt(document.getElementById('ballspeed').value));
 }
 
 function moveMe(){
@@ -62,15 +62,20 @@ function moveMe(){
 	
 
 	function frame(){
-		if (pos === posNum || pos === 0 || pos + ballspeed > posNum || pos - ballspeed < 0){ //checks for position value then reverses the reverse function (from either true or false)
+		if (pos === posNum || pos === 0 || pos + ballspeed > posNum || pos - ballspeed < 0)
 			reverse = !reverse;
-		}
-		if(!reverse){ // checks if reverse is false and then adds ballspeed to position every frame
-			pos += ballspeed;
+
+		if(!reverse ){ // checks if reverse is false and then adds ballspeed to position every frame
+			if (pos + ballspeed <= posNum)
+				pos += ballspeed;
+			else
+				pos = 0
 		}else{
-			pos -= ballspeed; // opposite of above ^
+			if (reverse && pos - ballspeed >= 0)
+				pos -= ballspeed;
+			else
+				pos = 0 // opposite of above ^
 		}
-		
 		//changes the style of circles by adding position number to their coordinate
 		//either top left bottom or right depending on circle
 		//adding two directions makes the circle go diagnal.
@@ -82,10 +87,6 @@ function moveMe(){
 		circle2.style.left = pos + "px";
 		circle3.style.bottom = pos + "px";
 		circle3.style.right = pos + "px";
-		
-		if (pos === posNum || pos === 0){ //checks for position value then reverses the reverse function (from either true or false)
-			reverse = !reverse;
-		}
 		
 	}
 	
