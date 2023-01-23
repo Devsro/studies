@@ -8,12 +8,25 @@
     <title>Document</title>
 </head>
 <body onload="moveMe()">
-    
+    <main>
+
+    <button class="menu-toggle">
+        <div class="hamburger"></div>
+    </button>
+    <div id="buttoncontain">
+    <button id="reload" onclick="location.reload();"> Reload </button>
+    <button id="moveme" onclick="moveMe()"> Move me</button>
+    <button id="hideme"onclick=hide()> Hide me</button>
+    <button id="colorme"onclick=randomColor()> Color me</button>
+    <div>
+        <input id="ballspeed" type="number" value="1">
+        <button onclick="changeSpeed()">Change Speed</button>
+    </div>
+    </div>
+    </main>
     <p id="pdate" class="date"></p>
     <p id="demo"></p>
-    
 
-    
     <div id="flicker" class="smallbox"" onmousedown="">
         <div id="flcircle" class="flbox"></div>
         <div id="flcircle2" class="flbox"></div>
@@ -21,15 +34,9 @@
         <div id="flcircle4" class="flbox"></div>
     </div>
     
-    <div id="buttoncontain">
-    <button id="reload" onclick="location.reload();"> Reload </button>
-    <button id="moveme" onclick="moveMe()"> Move me</button>
-    <button id="hideme"onclick=hide()> Hide me</button>
-    <button id="colorme"onclick=randomColor()> Color me</button>
     
-    </div>
-    <input id="ballspeed" type="number" value="1">
-    <button onclick="changeSpeed()">Change Speed</button>
+    
+    
     <script src="myfunction.js">
     </script>
 
