@@ -32,13 +32,18 @@ function randomColor(){
 	}
 }
 
-var ballspeed = parseInt(document.getElementById('ballspeed').value);
+var ballspeed = 1;
 var startAnimation = false;
 var circleId; // Making sure all animations use same circleId and pos
 var pos = 0;
 var reverse = false;
 var posNum = 150;
 // function which starts an animation on the circles
+
+function changeSpeed(){
+	ballspeed = parseInt(document.getElementById('ballspeed').value);
+}
+
 function moveMe(){
 	
 	const circle = document.getElementById("flcircle");
@@ -60,7 +65,7 @@ function moveMe(){
 		if (pos === posNum || pos === 0 || pos + ballspeed > posNum || pos - ballspeed < 0){ //checks for position value then reverses the reverse function (from either true or false)
 			reverse = !reverse;
 		}
-		if(!reverse){ // checks if reverse is false which it is and then adds 1 to position every frame
+		if(!reverse){ // checks if reverse is false and then adds ballspeed to position every frame
 			pos += ballspeed;
 		}else{
 			pos -= ballspeed; // opposite of above ^
