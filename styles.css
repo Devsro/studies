@@ -45,9 +45,11 @@
 
 #buttoncontain{
     display:flex;
+    justify-content: space-between;
+    flex-direction: column;
     position: absolute;
-    top: 50px;
-    width:auto;
+    top:50px;
+    
 
 }
 

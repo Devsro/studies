@@ -48,7 +48,7 @@ function moveMe(){
 	
 	//Check if animation started or not
 	if (!startAnimation){ // if it hasn't started (startAnimation is false)
-		circleId = setInterval(frame, 10); // Start animation
+		circleId = setInterval(frame, 1); // Start animation
 		startAnimation = true; 
 	}else{ // if it started (startAnimation is true)
 		clearInterval(circleId); // Stop animaation
@@ -58,9 +58,9 @@ function moveMe(){
 
 	function frame(){
 		if(!reverse){ // checks if reverse is false which it is and then adds 1 to position every frame
-			pos++;
+			pos += ballspeed;
 		}else{
-			pos--; // opposite of above ^
+			pos -= ballspeed; // opposite of above ^
 		}
 		
 		//changes the style of circles by adding position number to their coordinate
@@ -101,8 +101,6 @@ flicker.addEventListener('click', () => {
 		
 })
 
+var ballspeed = parseint(document.getElementById('ballspeed').value);
+console.log(ballspeed)
 
-
-var ballspeed = document.getElementById("speedchange");
-
-console.log(ballspeed);
