@@ -109,23 +109,21 @@ flicker.addEventListener('click', () => {
 		pos = 149;
 		
 })
-let buttons = document.getElementById('buttoncontain');
-let hamMenu = document.getElementById('hamburger-menu');
-let hamMenuOpen = document.getElementById('hamburger-menu').src = "assets/Hamburger_icon_open.png"
-let hamMenuClosed = document.getElementById('hamburger-menu').src = "assets/Hamburger_icon_closed.png"
-// function hideMenu() {
-// 	if (buttons.style.display === "none") {
-// 	buttons.style.display = "flex";
-// 	} else {
-// 	buttons.style.display = "none";
-// 	}
 
-// 	if (hamMenu.src = hamMenuClosed){
-// 		hamMenu.src = hamMenuOpen;	
-// 	}else
-// 		hamMenu.src = hamMenuClosed;
-// }
 
-// hamMenu.addEventListener('click', () => {
-// 	hamMenu.classList.toggle('open');
-// }
+let hamButton = document.getElementById("hamburger-button");
+let hamIcon = document.getElementById("hamburger-icon");
+let hamMenu = document.getElementById("hamburger-menu")
+
+function changeIcon(){
+	if (hamIcon.src.includes("assets/Hamburger_icon_closed.png")){
+		hamIcon.src = "assets/Hamburger_icon_open.png";
+	}else{
+		hamIcon.src = "assets/Hamburger_icon_closed.png";
+	}
+}
+
+function toggleHamburger(){
+	hamMenu.classList.toggle("none")
+}
+
