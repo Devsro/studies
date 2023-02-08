@@ -19,5 +19,5 @@ for(let i=0; i<imageCards.length;i++){
         let id = imageCards[i].getAttribute("id");
         imageCards[i].src = 'assets/' + id + '.png';
         imageCards[i].classList = "fade-in-image";
-      });
+    });
 }
