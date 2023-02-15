@@ -7,10 +7,10 @@
 *{
     transition:all 0.5ms;
     /* background: rgba(0, 0, 0, 0.1); */
-    color:white;
+    color:black;
 }
 button{
-    border: solid 1px white;
+    border: solid 1px black;
     margin:5px;
 }
 .date{
